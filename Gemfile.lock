@@ -1,10 +1,4 @@
 GIT
-  remote: https://github.com/nickbrannum/brannum_view_tool
-  revision: 83ebe20b4d24cb06f376289d4d8af7e1b73abc8c
-  specs:
-    brannum_view_tool (0.1.0)
-
-GIT
   remote: https://github.com/twbs/bootstrap-rubygem
   revision: b156edfee2b9629ad4751ee2a118a04f824ef9eb
   specs:
@@ -58,6 +52,7 @@ GEM
       execjs
     bcrypt (3.1.11)
     bindex (0.5.0)
+    brannum_view_tool (0.1.0)
     builder (3.2.3)
     byebug (9.0.6)
     coderay (1.1.1)
@@ -199,7 +194,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap!
-  brannum_view_tool!
+  brannum_view_tool (~> 0.1.0)
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.3)
