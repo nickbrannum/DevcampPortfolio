@@ -6,7 +6,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.page(params[:page]).per(5)
+    @blogs = Blog.order('id DESC').page(params[:page]).per(5)
     @page_title = "My portfolio blog"
   end
 
@@ -62,13 +62,13 @@ class BlogsController < ApplicationController
   end
   
   def toggle_status
-    
     if @blog.draft?
       @blog.published!
     elsif @blog.published?
       @blog.draft!
     end
-    redirect_to blogs_url, notice: 'Post status was updated.'
+        
+    redirect_to blogs_url, notice: 'Post status has been updated.'
   end
 
   private
