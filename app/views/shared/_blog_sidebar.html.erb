@@ -1,14 +1,22 @@
 <div class="col-sm-3 offset-sm-1 blog-sidebar">
-    <div class="sidebar-module sidebar-module-inset">
-      <h4>About</h4>
-      <p>My name is Nicholas Brannum and I am a starting web developer with a little knowledge in Ruby on Rails, HTML, and CSS. This is my first website I've ever built from sratch as well.</p>
-    </div>
-    <div class="sidebar-module">
-      <h4>Elsewhere</h4>
-      <ol class="list-unstyled social-links">
-        <li><a href="https://github.com/nickbrannum"><%= fa_icon "github" %></a></li>
-        <li><a href="https://www.facebook.com/profile.php?id=100011374487527"><%= fa_icon "facebook" %></a></li>
-        <li><a href="https://www.instagram.com/nickybrannum16/"><%= fa_icon "instagram" %></a></li>
-      </ol>
-    </div>
+  <div class="sidebar-module sidebar-module-inset">
+    <h4>About</h4>
+    <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
   </div>
+
+  <div class="sidebar-module">
+    <h4>Topics</h4>
+    <% @side_bar_topics.each do |topic| %>
+      <p><%= link_to topic.title, topic_path(topic) %></p>
+    <% end %>
+  </div>
+
+  <div class="sidebar-module">
+    <h4>Elsewhere</h4>
+    <ol class="list-unstyled social-links">
+      <li><a href="https://github.com/nickbrannum"><%= fa_icon "github" %></a>
+      <li><a href="https://www.facebook.com/profile.php?id=100011374487527"><%= fa_icon "facebook" %></a></li>
+      <li><a href="https://www.instagram.com/nickybrannum16/"><%= fa_icon "instagram" %></a></li>
+    </ol>
+  </div>
+</div>
